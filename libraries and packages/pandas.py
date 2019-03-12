@@ -159,3 +159,10 @@ df.diff.hist(bins=20)
 df.plot.barh(stacked=True)
 df.plot.scatter(x='a', y='b')
 df.plot.pie(subplots=True)
+____________________________________________________________________________
+import pandas as pd
+%matplotlib inline
+data = [['Alex',10],['Bob',12],['Clarke',13]]
+df = pd.DataFrame(data,columns=['Name','Age'],dtype=float)
+print(df)
+df.plot.hist()
