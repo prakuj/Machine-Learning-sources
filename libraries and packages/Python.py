@@ -16,7 +16,8 @@ print ("pankaj")
 print ('%d equals %d * %d' % (num,i,j))
 print (num, 'is a prime number')
 print ('Current fruit :', fruits[index])
-print "Python is really a great language,", "isn't it?"
+print ("Python is really a great language,", "isn't it?")
+print "Hello {0} {1}! You just delved into python.".format(raw_input(), raw_input())
 ____________________________________________________
 import class def print
 and or not is in
@@ -131,6 +132,9 @@ a//b   #Floor Division
 and or not
 in, not in  #in Evaluates to true if it finds a variable in the specified sequence and false otherwise.
 is, is not  #is Evaluates to true if the variables on either side of the operator point to the same object and false otherwise.
+# Ternary Operator:
+[on_true] if [expression] else [on_false] 
+min = a if a < b else b 
 ____________________________________________________
 Precedence:
 **
@@ -211,6 +215,7 @@ Conversion:
 	complex(x)   	#x + i0
 	complex(x,y)	#x + iy
 Functions:
+	pow(x,y,m)  # x^y % m
 	import math
 	math.abs(x)
 		ceil(x)
@@ -260,7 +265,8 @@ a*2 			#Repetition : multiple copies of the same string
 [ : ]			#Range Slice - Gives the characters from the given range	
 in
 not in
-r/R
+r/R 			# raw string
+u 				# unicode
 % 				#Format - Performs String formatting
 
 #String Formatting Operator
@@ -338,6 +344,31 @@ print u'Hello, world!'
 	decode(encoding='UTF-8',errors='strict')
 	encode(encoding='UTF-8',errors='strict')
 
+st = st + str(i) 					#concatenate
+ss = '-'.join(X) 					# X = iterable   #this-is-a-string
+print "Hello {0} {1}! You just delved into python.".format(raw_input(), raw_input())
+s[a:b]     							#gives s substring from index a to b-1
+s[::-1] 							#reverse a string
+len([i for i in range(len(s)) if s[i:i+len(b)] == b])   #count all (overlapping) occurence of b in s
+
+#check if string s contains an alphanumeric, alphabetical, digits, lower, upper
+print (any(c.isalnum()  for c in s))
+print (any(c.isalpha() for c in s))
+print (any(c.isdigit() for c in s))
+print (any(c.islower() for c in s))
+print (any(c.isupper() for c in s))
+
+#wrap the string into a paragraph of width
+import textwrap
+def wrap(s, width):
+    l = textwrap.wrap(s,width)
+    res = ""
+    for x in l:
+        res+=(x+'\n')
+    return res
+
+# width of n in binary format
+width = len("{0:b}".format(n))
 ____________________________________________________
 #Lists
 **items in a list need not be of the same type.
@@ -368,7 +399,7 @@ for x in [1, 2, 3]: print x,	1 2 3										Iteration
 
 #for L = ['spam', 'Spam', 'SPAM!']
 L[2]							SPAM!										Offsets start at zero
-L[-2]							Spam										Negative: count from the right
+L[-2]							Spam										Negative: count from the right(starets With -1)
 L[1:]							['Spam', 'SPAM!']							Slicing fetches sections
 
 #operations:
@@ -560,7 +591,7 @@ ab+
 if buffering value = 0, no buffering
 elif buffering value = 1, line buffering is performed while accessing a file.
 elif buffering value > 1, then buffering action is performed with the indicated buffer size. 
-elif buffering value > 1 the buffer size is the system default(default behavior).
+elif buffering value < 1 the buffer size is the system default(default behavior).
 
 #file object attributes
 print (fo.name)
@@ -793,27 +824,87 @@ class JustCounter:
       self.__secretCount += 1
       print (self.__secretCount)
 ____________________________________________________
-#add two numbers
-t = int(input())
-while t:
-    a, b = input().split()
-    print(int(a)+int(b))
-    t -= 1 
+enumerate(iterable, start=0)
+if A=[43,45,47]
+for k, z in enumerate(A):
+	print k,z
+0	43
+1	45
+2	47
+____________________________________________________
+create 2-D array
+dp=[[0]*col for i in range(row)]
 
-#sum of digits
-def sod(n):
-    s=0
-    d=0
-    while(n!=0):
-        d=(int)(n%10)
-        s=s+d
-        n=n/10
-    print(s)
-t=int(input())
-for i in range(t):
-    num=int(input())
-    sod(num)
+parent= list(range(r*c))
+#parent= [i for i in range(r*c)]
+____________________________________________________
+String:
+length = len(str)
+rev = str[::-1]
+ch=str[i]
+____________________________________________________
+Data Structure:
+Lists:
+	l=[1,2,3]
+	l=[i for i in range(3)]
+	l=list(range(2,10,2))
+	c=l[i]
+	l.append(23)  #appends at last
+	l.extend([12,23,45])
+	l.index(23)
+	l.index(23,2) #looks for 23 after index 2
+	l.insert(2,'a') # insert 'a' at index 2
+	l.remove('a')   # Delete the first occurrence 
+	l.pop()			# from last
+	l.count()
+	l.sort()
+	l.sort(reverse=True)
+	sorted(list)
+	l.reverse()
+	max(list)
+	#list as stack -> l.append('a') and l.pop()
+	#list as queue -> l.append('a') and l.pop(0) or l.remove(0)
+	list2=list(list1) 	# copy list
+	list2 = list1[:]
+	#Inserting items into a sorted list¶
+		>>> x = [4, 1]
+		>>> x.sort()
+		>>> import bisect
+		>>> bisect.insort(x, 2)
+		>>> x
+		[1, 2, 4]
+Set:
+		>>> a.add(val)
+		>>> a = set([1, 2, 3, 4])
+		>>> b = set([3, 4, 5, 6])
+		>>> a | b # Union
+		{1, 2, 3, 4, 5, 6}
+		>>> a & b # Intersection 			c = a.intersection(b)
+		{3, 4}
+		>>> a < b # Subset					c.issubset(a)			c.issuperset(a)
+		False
+		>>> a - b # Difference				a.difference(b)
+		{1, 2}
+		>>> a ^ b # Symmetric Difference    a.symmetric_difference(b)
+		{1, 2, 5, 6}
 
+collections module:
+	Deque
+		>>> from collections import deque
+		>>> q = deque(range(5))
+		>>> q.append(5)
+		>>> q.appendleft(6)
+		>>> q 
+		deque([6, 0, 1, 2, 3, 4, 5])
+		>>> q.pop()
+		5
+		>>> q.popleft()
+		6
+		>>> q.rotate(3)
+		>>> q 
+		deque([2, 3, 4, 0, 1])
+		
+____________________________________________________
 #factorial
 import math
 test=input()
@@ -822,3 +913,93 @@ while test>0:
     n=input()
     print math.factorial(n)
 ____________________________________________________
+class Solution:
+    def findLongestChain(self, pairs):
+        dp=[0]
+        pairs.sort(key = self.sortFirst, reverse = False)
+        print(pairs)
+        #pairs.sort(key = lambda x: x[1], reverse = False)
+        for x in range(1,len(pairs)):
+            if(pairs[x][0]>pairs[x-1][1]):
+                dp.append(dp[x-1]+1)
+            else:
+                dp.append(dp[x-1])
+            
+        return dp[len(pairs)-1]
+    def sortFirst(self,pair):
+        return pair[1]
+____________________________________________________
+	class Solution(object):
+    def canVisitAllRooms(self, rooms):
+        seen = [False] * len(rooms)
+        seen[0] = True
+        stack = [0]
+        #At the beginning, we have a todo list "stack" of keys to use
+        #'seen' represents at some point we have entered this room
+        while stack:  				  # While we have keys
+            node = stack.pop() 		  # get the next key 'node'
+            for nei in rooms[node]:   # For every key in room # 'node'
+                if not seen[nei]: 	  # ... that hasn't been used yet
+                    seen[nei] = True  # mark that we've entered the room
+                    stack.append(nei) # add the key to the todo list
+        return all(seen) 			  # Return true iff we've visited every room
+____________________________________________________
+#eval function:
+12
+insert 0 5
+insert 1 10
+insert 0 6
+print
+remove 6
+append 9
+append 1
+
+if __name__ == '__main__':
+    n = int(input())
+
+l = []
+for _ in range(n):
+    s = list(map(str,input().split()))
+    cmd = s[0]
+    args = s[1:]
+    if cmd !="print":
+        cmd += "("+ ",".join(args) +")"
+        eval("l."+cmd)
+    else:
+        print(l)
+____________________________________________________
+#take input:
+N = map(int,input().split())
+
+X = list(map(int, input().strip().split(' ')))
+
+x,y,z,n = [input() for i in range(4)]
+x,y = [x for x in map(int,input().split(' '))]
+
+x,y,z,n = [input() for i in range(4)]
+print([[a,b,c] for a in range(x+1) for b in range(y+1) for c in range(z+1) if a+b+c != n])
+
+l = ([i*i for i in range(n)])
+
+set([marks for name, marks in marksheet]) 		# set of marks from a list([name,marks])
+
+second_highest = sorted(list(set([marks for name, marks in marksheet])))[1]
+____________________________________________________
+Formatting:
+print ('%d equals %d * %d' % (num,i,j))
+print("%0.2f" %(sum(score)/3))
+print("{0:.2f}".format(sum(query_scores)/(len(query_scores))))
+____________________________________________________
+zipping
+	The purpose of zip() is to map the similar index of multiple containers so that they can be used just using as single entity.
+	name = [ "Manjeet", "Nikhil", "Shambhavi", "Astha" ] 
+	roll_no = [ 4, 1, 3, 2 ] 
+	marks = [ 40, 50, 60, 70 ] 
+	  
+	# using zip() to map values 
+	mapped = zip(name, roll_no, marks)
+UnZipping:
+	namz, roll_noz, marksz = zip(*mapped)
+	
+for pl, sc in zip(players, scores): 
+    print ("Player :  %s     Score : %d" %(pl, sc)) 
