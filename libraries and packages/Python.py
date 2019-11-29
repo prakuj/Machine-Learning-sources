@@ -11,6 +11,8 @@ Python:
 -scalabale
 -garbage collection
 ____________________________________________________
+#comments
+____________________________________________________
 print (a)
 print ("pankaj")
 print ('%d equals %d * %d' % (num,i,j))
@@ -19,109 +21,14 @@ print ('Current fruit :', fruits[index])
 print ("Python is really a great language,", "isn't it?")
 print "Hello {0} {1}! You just delved into python.".format(raw_input(), raw_input())
 ____________________________________________________
-import class def print
-and or not is in
-if else elif for while break continue return
-try except finally
-from with
-exec pass global raise del lambda yield
-____________________________________________________
-#comments
-____________________________________________________
+#Variable Declarations
 counter = 100          # An integer assignment
 miles   = 1000.0       # A floating point
 name    = "John"       # A string
 a = b = c = 1
 a,b,c = 1,2,"john"
 ____________________________________________________
-str = 'Hello World!'
-print str          # Prints complete string
-print str[0]       # Prints first character of the string
-print str[2:5]     # Prints characters starting from 3rd to 5th
-print str[2:]      # Prints string starting from 3rd character
-print str * 2      # Prints string two times
-print str + "TEST" # Prints concatenated string
-
-Hello World!
-H
-llo
-llo World!
-Hello World!Hello World!
-Hello World!TEST
-____________________________________________________
-list = [ 'abcd', 786 , 2.23, 'john', 70.2 ]
-tinylist = [123, 'john']
-print list          # Prints complete list
-print list[0]       # Prints first element of the list
-print list[1:3]     # Prints elements starting from 2nd till 3rd 
-print list[2:]      # Prints elements starting from 3rd element
-print tinylist * 2  # Prints list two times
-print list + tinylist # Prints concatenated lists
-
-['abcd', 786, 2.23, 'john', 70.2]
-abcd
-[786, 2.23]
-[2.23, 'john', 70.2]
-[123, 'john', 123, 'john']
-['abcd', 786, 2.23, 'john', 70.2, 123, 'john']
-____________________________________________________
-tuple = ( 'abcd', 786 , 2.23, 'john', 70.2  )
-tinytuple = (123, 'john')
-
-print tuple           # Prints complete list
-print tuple[0]        # Prints first element of the list
-print tuple[1:3]      # Prints elements starting from 2nd till 3rd 
-print tuple[2:]       # Prints elements starting from 3rd element
-print tinytuple * 2   # Prints list two times
-print tuple + tinytuple # Prints concatenated lists
-
-('abcd', 786, 2.23, 'john', 70.2)
-abcd
-(786, 2.23)
-(2.23, 'john', 70.2)
-(123, 'john', 123, 'john')
-('abcd', 786, 2.23, 'john', 70.2, 123, 'john')
-
-Lists are enclosed in brackets ( [ ] ) and their elements and size can be changed, while tuples are enclosed in parentheses ( ( ) ) and cannot be updated. 
-tuple[2] = 1000    # Invalid syntax with tuple
-list[2] = 1000     # Valid syntax with list
-____________________________________________________
-Python's dictionaries are kind of hash table type.'
-dict = {}
-dict['one'] = "This is one"
-dict[2]     = "This is two"
-tinydict = {'name': 'john','code':6734, 'dept': 'sales'}
-
-print dict['one']       # Prints value for 'one' key
-print dict[2]           # Prints value for 2 key
-print tinydict          # Prints complete dictionary
-print tinydict.keys()   # Prints all the keys
-print tinydict.values() # Prints all the values
-
-This is one
-This is two
-{'dept': 'sales', 'code': 6734, 'name': 'john'}
-['dept', 'code', 'name']
-['sales', 6734, 'john']
-____________________________________________________
-int(x [,base]) 			Converts x to an integer. base specifies the base if x is a string.
-long(x [,base] )        Converts x to a long integer. base specifies the base if x is a string.
-float(x)				Converts x to a floating-point number.
-complex(real [,imag])	Creates a complex number.
-str(x)					Converts object x to a string representation.
-repr(x) 				Converts object x to an expression string.
-eval(str) 				Evaluates a string and returns an object.
-tuple(s)				Converts s to a tuple.
-list(s)					Converts s to a list.
-set(s)					Converts s to a set.
-dict(d) 				Creates a dictionary. d must be a sequence of (key,value) tuples.
-frozenset(s) 			Converts s to a frozen set
-chr(x) 					Converts an integer to a character.
-unichr(x)				Converts an integer to a Unicode character.
-ord(x)					Converts a single character to its integer value.	
-hex(x) 					Converts an integer to a hexadecimal string.
-oct(x)					Converts an integer to an octal string.
-____________________________________________________
+#Operators
 +	- 	*	/	%
 a**b   # a^b
 a//b   #Floor Division
@@ -136,7 +43,7 @@ is, is not  #is Evaluates to true if the variables on either side of the operato
 [on_true] if [expression] else [on_false] 
 min = a if a < b else b 
 ____________________________________________________
-Precedence:
+#Precedence:
 **
 ~	+	- #unary
 *	/	%	//
@@ -198,6 +105,32 @@ ____________________________________________________
 #break continue pass
 The pass statement is a null operation; nothing happens when it executes. 
 The pass is also useful in places where your code will eventually go, but has not been written yet
+____________________________________________________
+#Keywords
+import class def print
+and or not is in
+if else elif for while break continue return
+try except finally
+from with
+exec pass global raise del lambda yield
+____________________________________________________
+int(x [,base]) 			Converts x to an integer. base specifies the base if x is a string.
+long(x [,base] )        Converts x to a long integer. base specifies the base if x is a string.
+float(x)				Converts x to a floating-point number.
+complex(real [,imag])	Creates a complex number.
+str(x)					Converts object x to a string representation.
+repr(x) 				Converts object x to an expression string.
+eval(str) 				Evaluates a string and returns an object.
+tuple(s)				Converts s to a tuple.
+list(s)					Converts s to a list.
+set(s)					Converts s to a set.
+dict(d) 				Creates a dictionary. d must be a sequence of (key,value) tuples.
+frozenset(s) 			Converts s to a frozen set
+chr(x) 					Converts an integer to a character.
+unichr(x)				Converts an integer to a Unicode character.
+ord(x)					Converts a single character to its integer value.	
+hex(x) 					Converts an integer to a hexadecimal string.
+oct(x)					Converts an integer to an octal string.
 ____________________________________________________
 #Numbers
 You can delete a single object or multiple objects by using the del statement. For example −
@@ -369,6 +302,87 @@ def wrap(s, width):
 
 # width of n in binary format
 width = len("{0:b}".format(n))
+
+____________________________________________________
+str = 'Hello World!'
+print str          # Prints complete string
+print str[0]       # Prints first character of the string
+print str[2:5]     # Prints characters starting from 3rd to 5th
+print str[2:]      # Prints string starting from 3rd character
+print str * 2      # Prints string two times
+print str + "TEST" # Prints concatenated string
+
+Hello World!
+H
+llo
+llo World!
+Hello World!Hello World!
+Hello World!TEST
+____________________________________________________
+#Functions
+def functionname( parameters ):
+   "function_docstring"
+   function_suite
+   return [expression]
+
+#calling
+	functionname(parameters)
+
+#pass by reference vs value
+All parameters (arguments) in the Python language are passed by reference. 
+It means if you change what a parameter refers to within a function, the change also reflects back in the calling function.
+
+#Function Arguments
+	Required arguments
+		def fname(arg1,arg2,arg3):
+			"docstring"
+			function_suite
+			return [expression]
+
+		fname(arg1,arg2,arg3)
+	Keyword arguments
+		# Function definition is here
+		def printinfo( name, age ):
+		   "This prints a passed info into this function"
+		   print "Name: ", name
+		   print "Age ", age
+		   return;
+
+		# Now you can call printinfo function
+		printinfo( age=50, name="miki" )
+	Default arguments
+		A default argument is an argument that assumes a default value if a value is not provided in the function call for that argument.
+		# Function definition is here
+		def printinfo( name, age = 35 ):
+		   "This prints a passed info into this function"
+		   print "Name: ", name
+		   print "Age ", age
+		   return;
+
+		# Now you can call printinfo function
+		printinfo( age=50, name="miki" )
+		printinfo( name="miki" )
+	Variable-length arguments
+		# Function definition is here
+		def printinfo( arg1, *vartuple ):
+		   "This prints a variable passed arguments"
+		   print "Output is: "
+		   print arg1
+		   for var in vartuple:
+		      print var
+		   return;
+
+		# Now you can call printinfo function
+		printinfo( 10 )
+		printinfo( 70, 60, 50 )
+
+
+#lambda functions
+	#can take any number of arguments but return just one value in the form of an expression. 
+
+sum = lambda arg1, arg2: arg1 + arg2;
+____________________________________________________
+#Data Structures
 ____________________________________________________
 #Lists
 **items in a list need not be of the same type.
@@ -494,84 +508,271 @@ dict.values()				#Returns list of dictionary dict's values
 dict.setdefault(key, default=None)	#Similar to get(), but will set dict[key]=default if key is not already in dict
 dict.update(dict2)			#Adds dictionary dict2's key-values pairs to dict
 ____________________________________________________
-#Functions
-def functionname( parameters ):
-   "function_docstring"
-   function_suite
-   return [expression]
-
-#calling
-	functionname(parameters)
-
-#pass by reference vs value
-All parameters (arguments) in the Python language are passed by reference. 
-It means if you change what a parameter refers to within a function, the change also reflects back in the calling function.
-
-#Function Arguments
-	Required arguments
-		def fname(arg1,arg2,arg3):
-			"docstring"
-			function_suite
-			return [expression]
-
-		fname(arg1,arg2,arg3)
-	Keyword arguments
-		# Function definition is here
-		def printinfo( name, age ):
-		   "This prints a passed info into this function"
-		   print "Name: ", name
-		   print "Age ", age
-		   return;
-
-		# Now you can call printinfo function
-		printinfo( age=50, name="miki" )
-	Default arguments
-		A default argument is an argument that assumes a default value if a value is not provided in the function call for that argument.
-		# Function definition is here
-		def printinfo( name, age = 35 ):
-		   "This prints a passed info into this function"
-		   print "Name: ", name
-		   print "Age ", age
-		   return;
-
-		# Now you can call printinfo function
-		printinfo( age=50, name="miki" )
-		printinfo( name="miki" )
-	Variable-length arguments
-		# Function definition is here
-		def printinfo( arg1, *vartuple ):
-		   "This prints a variable passed arguments"
-		   print "Output is: "
-		   print arg1
-		   for var in vartuple:
-		      print var
-		   return;
-
-		# Now you can call printinfo function
-		printinfo( 10 )
-		printinfo( 70, 60, 50 )
-
-
-#lambda functions
-	#can take any number of arguments but return just one value in the form of an expression. 
-
-sum = lambda arg1, arg2: arg1 + arg2;
+#Python OOPs
 ____________________________________________________
-import module1[, module2[,... moduleN]
-from modname import name1[, name2[, ... nameN]]
-from modname import *
+#creating class
+class Employee:
+   'Optional class documentation string'
+   empCount = 0
+   __secretCount = 0 	# private variable
 
-the Python interpreter searches for the module in the following sequences −
-	The current directory.
-	If the module isn't found, Python then searches each directory in the shell variable PYTHONPATH.
-	If all else fails, Python checks the default path. On UNIX, this default path is normally /usr/local/lib/python/.
+   def __init__(self, name, salary):
+      self.name = name
+      self.salary = salary
+      Employee.empCount += 1
+   
+   def displayCount(self):
+     print ("Total Employee %d" % Employee.empCount)
+
+   def displayEmployee(self):
+      print ("Name : ", self.name,  ", Salary: ", self.salary)
+	  
+   def __del__(self):
+      class_name = self.__class__.__name__
+      print (class_name, "destroyed")
+
+#creating instance
+you call the class using class name and pass in whatever arguments its __init__ method accepts.
+emp1 = Employee("Zara", 2000)
+
+#Calling class Methods
+emp1.displayEmployee()  # note that we dont pass 'self' here.
+
+#Destroying Objects (Garbage Collection)
+automatically called when reference count reaches 0
+However, a class can implement the special method __del__(), called a destructor, that is invoked when the instance is about to be destroyed. This method might be used to clean up any non-memory resources used by an instance.
+
+#The class has a documentation string, which can be accessed via ClassName.__doc__
+# __init__() is a special method, which is called class constructor or initialization method that Python calls when you create a new instance of this class.
+# You declare other class methods like normal functions with the exception that the first argument to each method is self. 
+# Python adds the self argument to the list for you; you do not need to include it when you call the methods.
+
+#Built-In Class Attributes
+__dict__  # Dictionary containing the class's namespace.
+__doc__   # Class documentation string or none, if undefined.
+__name__  # Class name.
+__module__# Module name in which the class is defined. This attribute is "__main__" in interactive mode.
+__bases__ # A possibly empty tuple containing the base classes, in the order of their occurrence in the base class list.
+
+#Instead of using the normal statements to access attributes, you can use the following functions −
+hasattr(emp1, 'salary')    # Returns true if 'salary' attribute exists
+getattr(emp1, 'salary')    # Returns value of 'salary' attribute
+setattr(emp1, 'salary', 7000) # Set attribute 'salary' at 7000
+delattr(emp1, 'salary')    # Delete attribute 'salary'
+
+#Scopes: (local / nonlocal / global keyword)
+	#global : defined outside function, or using 'global' keyword 
+	#local : within method
+	#nonlocal : neither local nor global, generally used in nested functions
+	def scope_test():
+		def do_local():
+			spam = "local spam"
+
+		def do_nonlocal():
+			nonlocal spam
+			spam = "nonlocal spam"
+
+		def do_global():
+			global spam
+			spam = "global spam"
+
+		spam = "test spam"
+		do_local()
+		print("After local assignment:", spam)
+		do_nonlocal()
+		print("After nonlocal assignment:", spam)
+		do_global()
+		print("After global assignment:", spam)
+
+	scope_test()
+	print("In global scope:", spam)
+
+	#The output of the example code is:
+		After local assignment: test spam
+		After nonlocal assignment: nonlocal spam
+		After global assignment: nonlocal spam
+		In global scope: global spam
+
+#inheritance
+	class SubClassName (ParentClass1[, modname.ParentClass2, ParentClass3...]):
+	   'Optional class documentation string'
+	   class_suite
+
+	issubclass(sub, sup) : returns True, if the given subclass sub is indeed a subclass of the superclass sup.
+	isinstance(obj, Class): returns True, if obj is an instance of class Class or is an instance of a subclass of Class
+
+#Overriding
+	class Parent:        # define parent class
+	   def myMethod(self):
+		  print ('Calling parent method')
+
+	class Child(Parent): # define child class
+	   def myMethod(self):
+		  print ('Calling child method')
+
+	c = Child()          # instance of child
+	c.myMethod()         # child calls overridden method
+
+#Base Overloading Methods
+	__init__ ( self [,args...] )
+		Constructor (with any optional arguments)
+		Sample Call : obj = className(args)
+	__del__( self )
+		Destructor, deletes an object
+		Sample Call : del obj	
+	__repr__( self )
+		Evaluatable string representation
+		Sample Call : repr(obj)	
+	__str__( self )
+		Printable string representation
+		Sample Call : str(obj)	
+	__cmp__ ( self, x )
+		Object comparison
+		Sample Call : cmp(obj, x)
+
+#Data Hiding
+	You need to name attributes with a double underscore prefix, and those attributes then will not be directly visible to outsiders.
+	class JustCounter:
+	   __secretCount = 0
+	  
+	   def count(self):
+		  self.__secretCount += 1
+		  print (self.__secretCount)
+
+#Generators
+	#Generators are a simple and powerful tool for creating iterators. 
+	#They are written like regular functions but use the yield statement whenever they want to return data. 
+	#Each time next() is called on it, the generator resumes where it left off (it remembers all the data values and which statement was last executed).
+	def reverse(data):
+		for index in range(len(data)-1, -1, -1):
+			yield data[index]
+	
+	>>> for char in reverse('golf'):
+	...     print(char)
+	...
+	f
+	l
+	o
+	g
+	# What makes generators so compact is that the __iter__() and __next__() methods are created automatically.
 ____________________________________________________
-I/O
-raw_input([prompt])
-input([prompt])
+#Modules
+	#A module is a file containing Python definitions and statements. 
+	#The file name is the module name with the suffix .py appended. 
+	#Within a module, the module’s name (as a string) is available as the value of the global variable __name__
+	
+	fibo.py:
+		def fib(n):
+			...
+			
+		def fib2(n):
+			...
+			
+	import fibo
+	fibo.fib(1000)
+	fibo.__name__    # returns 'fibo'
+	fibNewName = fibo.fib # you can assign it to a local name
+	fibNewName(500)
+			
+	import module1[, module2[,... moduleN]			# import fibo
+	from modname import name1[, name2[, ... nameN]] # from fibo import fib, fib2
+	from modname import *							# from fibo import *
+	>>> import fibo as fib
+	>>> fib.fib(500)
+	>>> from fibo import fib as fibonacci
+	>>> fibonacci(500)
 
-Before you can read or write a file, you have to open it using Python's built-in open() function.
-file object = open(file_name [, access_mode][, buffering])
+	the Python interpreter searches for the module in the following sequences −
+		The current directory.
+		If the module isn't found, Python then searches each directory in the shell variable PYTHONPATH.
+		If all else fails, Python checks the default path. On UNIX, this default path is normally /usr/local/lib/python/.
+
+#Packages:
+	way to structure python modules:
+	
+	sound/                          Top-level package
+      __init__.py               Initialize the sound package
+      formats/                  Subpackage for file format conversions
+              __init__.py
+              wavread.py
+              wavwrite.py
+              aiffread.py
+              aiffwrite.py
+              auread.py
+              auwrite.py
+              ...
+      effects/                  Subpackage for sound effects
+              __init__.py
+              echo.py
+              surround.py
+              reverse.py
+              ...
+      filters/                  Subpackage for filters
+              __init__.py
+              equalizer.py
+              vocoder.py
+              karaoke.py
+              ...
+	# The __init__.py files are required to make Python treat directories containing the file as packages.
+	
+	import sound.effects.echo
+	#This loads the submodule sound.effects.echo. It must be referenced with its full name.
+	sound.effects.echo.echofilter(input, output, delay=0.7, atten=4)
+	
+	from sound.effects import echo
+	#This also loads the submodule echo, and makes it available without its package prefix, so it can be used as follows:
+	echo.echofilter(input, output, delay=0.7, atten=4)
+	
+	from sound.effects.echo import echofilter
+	#Again, this loads the submodule echo, but this makes its function echofilter() directly available:
+	echofilter(input, output, delay=0.7, atten=4)
+	
+	#Intra-package imports: using dots
+	from . import echo
+	from .. import formats
+	from ..filters import equalizer
+____________________________________________________
+#Formatting
+	#String Formatting1: begin a string with f or F before the opening quotation mark or triple quotation mark. 
+	# Inside this string, you can write a Python expression between { and } characters that can refer to variables or literal values.
+		>>> year = 2016
+		>>> event = 'Referendum'
+		>>> f'Results of the {year} {event}'
+		'Results of the 2016 Referendum'
+	
+	# str.format()
+		>>> yes_votes = 42_572_654
+		>>> no_votes = 43_132_495
+		>>> percentage = yes_votes / (yes_votes + no_votes)
+		>>>'{:-9} YES votes  {:2.2%}'.format(yes_votes, percentage)
+		' 42572654 YES votes  49.67%'
+	
+	>>> import math
+	>>> print(f'The value of pi is approximately {math.pi:.3f}.')
+	The value of pi is approximately 3.142.
+	
+	#Passing an integer after the ':' will cause that field to be a minimum number of characters wide. This is useful for making columns line up.
+	
+	#Old Formatting Method 3:
+	>>> print('The value of pi is approximately %5.3f.' % math.pi)
+	
+	print ('%d equals %d * %d' % (num,i,j))
+	print("%0.2f" %(sum(score)/3))
+	print("{0:.2f}".format(sum(query_scores)/(len(query_scores))))
+____________________________________________________
+#IO
+	#Standard IO
+		raw_input([prompt])
+		input([prompt])
+
+		N = map(int,input().split())
+		X = list(map(int, input().strip().split(' ')))
+		x,y,z,n = [input() for i in range(4)]
+		x,y = [x for x in map(int,input().split(' '))]
+		x,y,z,n = [input() for i in range(4)]
+
+#Before you can read or write a file, you have to open it using Python's built-in open() function.
+	file object = open(file_name [, access_mode][, buffering])
 
 #access mode
 r readonly
@@ -610,6 +811,33 @@ fo.read([count]) # passed parameter is the number of bytes to be read from the o
 	The from argument specifies the reference position from where the bytes are to be moved.
 	if from = 0, it means use the beginning of the file as the reference position and 1 means use the current position as the reference position and if it is set to 2 then the end of the file would be taken as the reference position.
 
+	>>> with open('workfile') as f:
+	...     read_data = f.read()
+	>>> f.read()
+	'This is the entire file.\n'
+	
+	#f.readline() reads a single line from the file; 
+	#a newline character (\n) is left at the end of the string, 
+	#and is only omitted on the last line of the file if the file doesn’t end in a newline.
+		>>> f.readline()
+		'This is the first line of the file.\n'
+		>>> f.readline()
+		'Second line of the file\n'
+	
+	#For reading lines from a file, you can loop over the file object. 
+	#This is memory efficient, fast, and leads to simple code:
+		>>>
+		>>> for line in f:
+		...     print(line, end='')
+		...
+		This is the first line of the file.
+		Second line of the file
+		
+	#f.write(string) writes the contents of string to the file, returning the number of characters written.
+		>>>
+		>>> f.write('This is a test\n')
+		15
+____________________________________________________
 #Renaming and Deleting Files
 Python os module provides methods that help you perform file-processing operations, such as renaming and deleting files,mkdir,chdir etc.
 
@@ -728,102 +956,6 @@ try:
 except Networkerror,e:
    print e.args
 ____________________________________________________
-#OOPS
-
-#creating class
-#The class has a documentation string, which can be accessed via ClassName.__doc__
-
-class Employee:
-   'Optional class documentation string'
-   empCount = 0
-
-   def __init__(self, name, salary):
-      self.name = name
-      self.salary = salary
-      Employee.empCount += 1
-   
-   def displayCount(self):
-     print ("Total Employee %d" % Employee.empCount)
-
-   def displayEmployee(self):
-      print ("Name : ", self.name,  ", Salary: ", self.salary)
-	  
-   def __del__(self):
-      class_name = self.__class__.__name__
-      print (class_name, "destroyed")
-
-# __init__() is a special method, which is called class constructor or initialization method that Python calls when you create a new instance of this class.
-# You declare other class methods like normal functions with the exception that the first argument to each method is self. 
-# Python adds the self argument to the list for you; you do not need to include it when you call the methods.
-
-#creating instance
-you call the class using class name and pass in whatever arguments its __init__ method accepts.
-emp1 = Employee("Zara", 2000)
-emp1.displayEmployee()
-
-#Instead of using the normal statements to access attributes, you can use the following functions −
-hasattr(emp1, 'salary')    # Returns true if 'salary' attribute exists
-getattr(emp1, 'salary')    # Returns value of 'salary' attribute
-setattr(emp1, 'salary', 7000) # Set attribute 'salary' at 7000
-delattr(emp1, 'salary')    # Delete attribute 'salary'
-
-#Built-In Class Attributes
-__dict__  # Dictionary containing the class's namespace.
-__doc__   # Class documentation string or none, if undefined.
-__name__  # Class name.
-__module__# Module name in which the class is defined. This attribute is "__main__" in interactive mode.
-__bases__ # A possibly empty tuple containing the base classes, in the order of their occurrence in the base class list.
-
-#Destroying Objects (Garbage Collection)
-automatically called when reference count reaches 0
-However, a class can implement the special method __del__(), called a destructor, that is invoked when the instance is about to be destroyed. This method might be used to clean up any non-memory resources used by an instance.
-
-#inheritance
-class SubClassName (ParentClass1[, ParentClass2, ...]):
-   'Optional class documentation string'
-   class_suite
-
-issubclass(sub, sup) : returns True, if the given subclass sub is indeed a subclass of the superclass sup.
-isinstance(obj, Class): returns True, if obj is an instance of class Class or is an instance of a subclass of Class
-
-#Overriding
-class Parent:        # define parent class
-   def myMethod(self):
-      print ('Calling parent method')
-
-class Child(Parent): # define child class
-   def myMethod(self):
-      print ('Calling child method')
-
-c = Child()          # instance of child
-c.myMethod()         # child calls overridden method
-
-#Base Overloading Methods
-__init__ ( self [,args...] )
-	Constructor (with any optional arguments)
-	Sample Call : obj = className(args)
-__del__( self )
-	Destructor, deletes an object
-	Sample Call : del obj	
-__repr__( self )
-	Evaluatable string representation
-	Sample Call : repr(obj)	
-__str__( self )
-	Printable string representation
-	Sample Call : str(obj)	
-__cmp__ ( self, x )
-	Object comparison
-	Sample Call : cmp(obj, x)
-
-#Data Hiding
-You need to name attributes with a double underscore prefix, and those attributes then will not be directly visible to outsiders.
-class JustCounter:
-   __secretCount = 0
-  
-   def count(self):
-      self.__secretCount += 1
-      print (self.__secretCount)
-____________________________________________________
 enumerate(iterable, start=0)
 if A=[43,45,47]
 for k, z in enumerate(A):
@@ -842,107 +974,6 @@ String:
 length = len(str)
 rev = str[::-1]
 ch=str[i]
-____________________________________________________
-Data Structure:
-Lists:
-	l=[1,2,3]
-	l=[i for i in range(3)]
-	l=list(range(2,10,2))
-	c=l[i]
-	l.append(23)  #appends at last
-	l.extend([12,23,45])
-	l.index(23)
-	l.index(23,2) #looks for 23 after index 2
-	l.insert(2,'a') # insert 'a' at index 2
-	l.remove('a')   # Delete the first occurrence 
-	l.pop()			# from last
-	l.count()
-	l.sort()
-	l.sort(reverse=True)
-	sorted(list)
-	l.reverse()
-	max(list)
-	#list as stack -> l.append('a') and l.pop()
-	#list as queue -> l.append('a') and l.pop(0) or l.remove(0)
-	list2=list(list1) 	# copy list
-	list2 = list1[:]
-	#Inserting items into a sorted list¶
-		>>> x = [4, 1]
-		>>> x.sort()
-		>>> import bisect
-		>>> bisect.insort(x, 2)
-		>>> x
-		[1, 2, 4]
-Set:
-		>>> a.add(val)
-		>>> a = set([1, 2, 3, 4])
-		>>> b = set([3, 4, 5, 6])
-		>>> a | b # Union
-		{1, 2, 3, 4, 5, 6}
-		>>> a & b # Intersection 			c = a.intersection(b)
-		{3, 4}
-		>>> a < b # Subset					c.issubset(a)			c.issuperset(a)
-		False
-		>>> a - b # Difference				a.difference(b)
-		{1, 2}
-		>>> a ^ b # Symmetric Difference    a.symmetric_difference(b)
-		{1, 2, 5, 6}
-
-collections module:
-	Deque
-		>>> from collections import deque
-		>>> q = deque(range(5))
-		>>> q.append(5)
-		>>> q.appendleft(6)
-		>>> q 
-		deque([6, 0, 1, 2, 3, 4, 5])
-		>>> q.pop()
-		5
-		>>> q.popleft()
-		6
-		>>> q.rotate(3)
-		>>> q 
-		deque([2, 3, 4, 0, 1])
-		
-____________________________________________________
-#factorial
-import math
-test=input()
-while test>0:
-    test-=1
-    n=input()
-    print math.factorial(n)
-____________________________________________________
-class Solution:
-    def findLongestChain(self, pairs):
-        dp=[0]
-        pairs.sort(key = self.sortFirst, reverse = False)
-        print(pairs)
-        #pairs.sort(key = lambda x: x[1], reverse = False)
-        for x in range(1,len(pairs)):
-            if(pairs[x][0]>pairs[x-1][1]):
-                dp.append(dp[x-1]+1)
-            else:
-                dp.append(dp[x-1])
-            
-        return dp[len(pairs)-1]
-    def sortFirst(self,pair):
-        return pair[1]
-____________________________________________________
-	class Solution(object):
-    def canVisitAllRooms(self, rooms):
-        seen = [False] * len(rooms)
-        seen[0] = True
-        stack = [0]
-        #At the beginning, we have a todo list "stack" of keys to use
-        #'seen' represents at some point we have entered this room
-        while stack:  				  # While we have keys
-            node = stack.pop() 		  # get the next key 'node'
-            for nei in rooms[node]:   # For every key in room # 'node'
-                if not seen[nei]: 	  # ... that hasn't been used yet
-                    seen[nei] = True  # mark that we've entered the room
-                    stack.append(nei) # add the key to the todo list
-        return all(seen) 			  # Return true iff we've visited every room
 ____________________________________________________
 #eval function:
 12
@@ -968,28 +999,6 @@ for _ in range(n):
     else:
         print(l)
 ____________________________________________________
-#take input:
-N = map(int,input().split())
-
-X = list(map(int, input().strip().split(' ')))
-
-x,y,z,n = [input() for i in range(4)]
-x,y = [x for x in map(int,input().split(' '))]
-
-x,y,z,n = [input() for i in range(4)]
-print([[a,b,c] for a in range(x+1) for b in range(y+1) for c in range(z+1) if a+b+c != n])
-
-l = ([i*i for i in range(n)])
-
-set([marks for name, marks in marksheet]) 		# set of marks from a list([name,marks])
-
-second_highest = sorted(list(set([marks for name, marks in marksheet])))[1]
-____________________________________________________
-Formatting:
-print ('%d equals %d * %d' % (num,i,j))
-print("%0.2f" %(sum(score)/3))
-print("{0:.2f}".format(sum(query_scores)/(len(query_scores))))
-____________________________________________________
 zipping
 	The purpose of zip() is to map the similar index of multiple containers so that they can be used just using as single entity.
 	name = [ "Manjeet", "Nikhil", "Shambhavi", "Astha" ] 
@@ -1003,3 +1012,80 @@ UnZipping:
 	
 for pl, sc in zip(players, scores): 
     print ("Player :  %s     Score : %d" %(pl, sc)) 
+____________________________________________________
+#One Liners:
+		print([[a,b,c] for a in range(x+1) for b in range(y+1) for c in range(z+1) if a+b+c != n])
+		l = ([i*i for i in range(n)])
+		set([marks for name, marks in marksheet]) 		# set of marks from a list([name,marks])
+		second_highest = sorted(list(set([marks for name, marks in marksheet])))[1]
+____________________________________________________
+#Python Modules
+____________________________________________________
+#collections module: https://docs.python.org/3.7/library/collections.html
+	#Deque
+		>>> from collections import deque
+		>>> q = deque(range(5))
+		>>> q.append(5)
+		>>> q.appendleft(6)
+		>>> q 
+		deque([6, 0, 1, 2, 3, 4, 5])
+		>>> q.pop()
+		5
+		>>> q.popleft()
+		6
+		>>> q.rotate(3)
+		>>> q 
+		deque([2, 3, 4, 0, 1])
+	#namedtuple()
+	#ChainMap
+	#Counter
+	#OrderedDict
+	#defaultdict
+	#UserDict
+	#UserList
+	#UserString
+____________________________________________________
+#os module https://docs.python.org/3/library/os.html
+____________________________________________________
+#sys module
+____________________________________________________
+#Programs
+____________________________________________________
+#factorial
+import math
+test=input()
+while test>0:
+    test-=1
+    n=input()
+    print math.factorial(n)
+____________________________________________________
+class Solution:
+    def findLongestChain(self, pairs):
+        dp=[0]
+        pairs.sort(key = self.sortFirst, reverse = False)
+        print(pairs)
+        #pairs.sort(key = lambda x: x[1], reverse = False)
+        for x in range(1,len(pairs)):
+            if(pairs[x][0]>pairs[x-1][1]):
+                dp.append(dp[x-1]+1)
+            else:
+                dp.append(dp[x-1])
+            
+        return dp[len(pairs)-1]
+    def sortFirst(self,pair):
+        return pair[1]
+____________________________________________________
+class Solution(object):
+    def canVisitAllRooms(self, rooms):
+        seen = [False] * len(rooms)
+        seen[0] = True
+        stack = [0]
+        #At the beginning, we have a todo list "stack" of keys to use
+        #'seen' represents at some point we have entered this room
+        while stack:  				  # While we have keys
+            node = stack.pop() 		  # get the next key 'node'
+            for nei in rooms[node]:   # For every key in room # 'node'
+                if not seen[nei]: 	  # ... that hasn't been used yet
+                    seen[nei] = True  # mark that we've entered the room
+                    stack.append(nei) # add the key to the todo list
+        return all(seen) 			  # Return true iff we've visited every room
