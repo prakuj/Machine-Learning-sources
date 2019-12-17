@@ -114,10 +114,10 @@ try except finally
 from with
 exec pass global raise del lambda yield
 ____________________________________________________
-int(x [,base]) 			Converts x to an integer. base specifies the base if x is a string.
-long(x [,base] )        Converts x to a long integer. base specifies the base if x is a string.
+int(x [,base]) 				Converts x to an integer. base specifies the base if x is a string.
+long(x [,base] )        		Converts x to a long integer. base specifies the base if x is a string.
 float(x)				Converts x to a floating-point number.
-complex(real [,imag])	Creates a complex number.
+complex(real [,imag])			Creates a complex number.
 str(x)					Converts object x to a string representation.
 repr(x) 				Converts object x to an expression string.
 eval(str) 				Evaluates a string and returns an object.
@@ -125,10 +125,10 @@ tuple(s)				Converts s to a tuple.
 list(s)					Converts s to a list.
 set(s)					Converts s to a set.
 dict(d) 				Creates a dictionary. d must be a sequence of (key,value) tuples.
-frozenset(s) 			Converts s to a frozen set
-chr(x) 					Converts an integer to a character.
+frozenset(s) 				Converts s to a frozen set
 unichr(x)				Converts an integer to a Unicode character.
-ord(x)					Converts a single character to its integer value.	
+ord(x)					Converts a single character to its integer value.
+chr(x) 					Converts an integer to a character.
 hex(x) 					Converts an integer to a hexadecimal string.
 oct(x)					Converts an integer to an octal string.
 ____________________________________________________
@@ -177,30 +177,39 @@ Functions:
 		e
 	import random
 		random.choice(seq)		#returns a random item from a list, tuple, or string.
-			   randrange ([start,] stop [,step])
-		       random()			#[0,1)
-		       seed([x])
-		       shuffle(lst)		#Randomizes the items of a list in place. Returns None.
-		       uniform(x, y)	#A random float r, such that x is less than or equal to r and r is less than y
+			randrange ([start,] stop [,step])
+		       	random()			#[0,1)
+		       	seed([x])
+		       	shuffle(lst)		#Randomizes the items of a list in place. Returns None.
+		       	uniform(x, y)	#A random float r, such that x is less than or equal to r and r is less than y
 ____________________________________________________
 #Strings
-var1 = 'Hello World!'
-var2 = "Python Programming"
-print "var1[0]: ", var1[0]
-print "var2[1:5]: ", var2[1:5]
 
-var1[0]:  H
-var2[1:5]:  ytho
+str = 'Hello World!'
+print str          # Prints complete string
+print str[0]       # Prints first character of the string
+print str[2:5]     # Prints characters starting from 3rd to 5th
+print str[2:]      # Prints string starting from 3rd character
+print str * 2      # Prints string two times
+print str + "TEST" # Prints concatenated string
+
+Hello World!
+H
+llo
+llo World!
+Hello World!Hello World!
+Hello World!TEST
+
 
 a + b 			#concatenate
 a*2 			#Repetition : multiple copies of the same string
-[]				#Slice - Gives the character from the given index
+[]			#Slice - Gives the character from the given index
 [ : ]			#Range Slice - Gives the characters from the given range	
 in
 not in
 r/R 			# raw string
-u 				# unicode
-% 				#Format - Performs String formatting
+u 			# unicode
+% 			#Format - Performs String formatting
 
 #String Formatting Operator
 print "My name is %s and weight is %d kg!" % ('Zara', 21)
@@ -248,7 +257,7 @@ print u'Hello, world!'
 	len(string)
 	str.endswith(suffix, beg=0, end=len(string))
 	str.startswith(str, beg=0,end=len(string))
-	find(str, beg=0 end=len(string)) 			#eturns index if found and -1 otherwise.
+	**find(str, beg=0 end=len(string)) 			#eturns index if found and -1 otherwise.
 	index(str, beg=0, end=len(string))			#Same as find(), but raises an exception if str not found.
 	rfind(str, beg=0,end=len(string))	#Same as find(), but search backwards in string.
 	rindex( str, beg=0, end=len(string))#Same as index(), but search backwards in string.
@@ -279,45 +288,18 @@ print u'Hello, world!'
 
 st = st + str(i) 					#concatenate
 ss = '-'.join(X) 					# X = iterable   #this-is-a-string
+
+#formatting
 print "Hello {0} {1}! You just delved into python.".format(raw_input(), raw_input())
+
 s[a:b]     							#gives s substring from index a to b-1
 s[::-1] 							#reverse a string
-len([i for i in range(len(s)) if s[i:i+len(b)] == b])   #count all (overlapping) occurence of b in s
 
-#check if string s contains an alphanumeric, alphabetical, digits, lower, upper
+#check if string s contains an alphanumeric character
 print (any(c.isalnum()  for c in s))
-print (any(c.isalpha() for c in s))
-print (any(c.isdigit() for c in s))
-print (any(c.islower() for c in s))
-print (any(c.isupper() for c in s))
-
-#wrap the string into a paragraph of width
-import textwrap
-def wrap(s, width):
-    l = textwrap.wrap(s,width)
-    res = ""
-    for x in l:
-        res+=(x+'\n')
-    return res
 
 # width of n in binary format
 width = len("{0:b}".format(n))
-
-____________________________________________________
-str = 'Hello World!'
-print str          # Prints complete string
-print str[0]       # Prints first character of the string
-print str[2:5]     # Prints characters starting from 3rd to 5th
-print str[2:]      # Prints string starting from 3rd character
-print str * 2      # Prints string two times
-print str + "TEST" # Prints concatenated string
-
-Hello World!
-H
-llo
-llo World!
-Hello World!Hello World!
-Hello World!TEST
 ____________________________________________________
 #Functions
 def functionname( parameters ):
